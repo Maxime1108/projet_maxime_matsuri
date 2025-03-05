@@ -1,0 +1,97 @@
+h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffd1d1;
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-container h1 {
+  font-size: 32px;
+  color: #6a0dad;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.logo-container nav {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.form-container .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #ff5a79;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #e04b68;
+}
+
+footer {
+  position: absolute;
+  bottom: 2px;
+  color: #555;
+  text-align: center;
+  width: 100%;
+}
+
+body::after {
+  content: "🌸";
+  font-size: 4em;
+  position: absolute;
+  bottom: 70px;
+  left: 20px;
+  opacity: 0.1;
+}

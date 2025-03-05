@@ -1,0 +1,47 @@
+# Mise en route du moteur de réecriture
+RewriteEngine On 
+
+#Règles de réecritures d'URL :
+
+    # Exclure tous les fichiers et les dossiers du repertoire 'assets' de la réecriture
+    # Il vérifie si l'URL demandée commence par /public/, [OR] indique que cette condition est une condition alternative (OU ||)
+    RewriteCond %{REQUEST_URI} ^/public/ [OR]
+
+    # Il vérifie si le fichier demandé existe (-f veut dire fichier existant)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+
+    # Il vérifie si le repertoire (ou dossier) demandé existe (-d veut dire repertoire existant)
+    RewriteCond %{REQUEST_FILENAME} -d
+
+    # Si l'une des conditions est vraie, la règle est appliqué. Le - signifique pas de réecriture (laisse l'URL comme elle est). [L] indique que c'est la derniere règle à appliquer si elle correspond
+    RewriteRule ^ - [L]
+
+    # Redirige vers errors/404.php pour les erreurs 404.
+    RewriteRule ^404$ errors/404.php
+
+    # Pour le cas d'un admin : Règle de réecriture
+    
+    # Réecrit /admin ou /admin/ en index.php?doc=admin
+    RewriteRule ^admin/?$  index.php?doc=admin [L,QSA]
+
+    # Réecrit /admin/controller ou admin/controller/ en index.php?doc=admin&controller=$1
+    RewriteRule ^admin/(\w+)/?$  index.php?doc=admin&controller=$1 [L,QSA]
+
+    # Réecrit /admin/controller/method en index.php?doc=admin&controller=$1&methode=$2
+    RewriteRule ^admin/(\w+)/(\w+)$ index.php?doc=admin&controller=$1&method=$2 [L,QSA]
+
+    # Réecrit /admin/controller/method/id en index.php?doc=admin&controller=$1&method=$2&id=$3
+    RewriteRule ^admin/(\w+)/(\w+)/(\S+)$ index.php?doc=admin&controller=$1&method=$2&id=$3 [L,QSA]
+
+    # Réecriture pour la page d'accueil 
+    RewriteRule ^$  index.php [L]
+
+    # Réecriture pour les url non-admin
+    # Réecrit /controller/ en index.php?controller=$1
+    RewriteRule ^(\w+)/?$ index.php?controller=$1 [L,QSA]
+
+    # Réecrit /controller/method en index.php?controller=$1&method=$2
+    RewriteRule ^(\w+)/(\w+)$ index.php?controller=$1&method=$2 [L,QSA]
+
+    # Réecrit /controller/method/id en index.php?controller=$1&method=2&id=$3
+    RewriteRule ^(\w+)/(\w+)/(\S+)$ index.php?controller=$1&method=$2&id=$3 [L,QSA]

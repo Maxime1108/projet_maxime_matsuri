@@ -1,0 +1,167 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe6e6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gestion des erreurs exception */
+.alert-error {
+  color: red;
+  font-weight: bold;
+}
+
+header {
+  background-color: #ffd9d9;
+  text-align: center;
+  padding: 20px 0;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid #ffb3b3;
+}
+
+header h1 {
+  font-family: "Georgia, serif";
+  font-size: 48px;
+}
+
+h1 {
+  font-family: "Comic Sans MS", "Arial", sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0px #c38ebb, 6px 6px 5px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  color: #d9578e;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: #f36c7d;
+  text-decoration: underline;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+}
+
+nav a:hover {
+  color: #e60000;
+}
+
+#img_panier {
+  width: 30px;
+}
+
+/* Inscription / Connexion */
+
+.inscription_connexion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.inscription_connexion img {
+  width: 40px;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.category-card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffd9d9;
+  border-top: 2px solid #ffb3b3;
+}
+
+footer p {
+  margin: 0;
+  color: #333;
+}
+
+.logo {
+  font-size: 24px;
+  color: #ff91b2;
+}
+
+.avatar-link {
+  align-items: center;
+}
+
+.avatar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff91b2;
+  transition: transform 0.3s ease;
+}
+
+.avatar-icon:hover {
+  transform: scale(1.1);
+}
+
+/* à modifier si necessaire (chaque element du panier) */
+.item_panier {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 700px;
+  margin: 30px;
+
+  h3 {
+    width: 100px;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+body::before {
+  content: "🌸";
+  font-size: 4em;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.1;
+}
