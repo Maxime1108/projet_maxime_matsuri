@@ -1,14 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Serif+JP:wght@500&display=swap");
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #ffe6e6;
   margin: 0;
   padding: 0;
-}
-
-/* Gestion des erreurs exception */
-.alert-error {
-  color: red;
-  font-weight: bold;
 }
 
 header {
@@ -62,8 +58,6 @@ nav a:hover {
 #img_panier {
   width: 30px;
 }
-
-/* Inscription / Connexion */
 
 .inscription_connexion {
   display: flex;
@@ -141,7 +135,6 @@ footer p {
   transform: scale(1.1);
 }
 
-/* à modifier si necessaire (chaque element du panier) */
 .item_panier {
   display: flex;
   align-items: center;
@@ -164,4 +157,21 @@ body::before {
   top: 20px;
   right: 20px;
   opacity: 0.1;
+}
+
+nav a[href*="a_propos"],
+nav a[href*="contact"] {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #8b0000;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a[href*="a_propos"]:hover,
+nav a[href*="contact"]:hover {
+  color: #c21807;
+  transform: scale(1.1);
 }

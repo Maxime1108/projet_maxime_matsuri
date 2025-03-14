@@ -9,7 +9,7 @@
                 <p class="item_price"><?= $p['produit']->getPrix(); ?><span>€</span></p>
                 <div class="quantites">
                     <label for="quantite">Quantité : </label>
-                    <input type="number" value="<?= $p['quantite']; ?>" data-id="<?= $p['produit']->getId() ?>" data-url = "<?= addLink('panier','update'); ?>">
+                    <input type="number" value="<?= $p['quantite']; ?>" data-id="<?= $p['produit']->getId() ?>" data-url="<?= addLink('panier', 'update'); ?>">
                 </div>
                 <button class="item_supp" data-id="<?= $p['produit']->getId(); ?>" data-url="<?= addLink('panier', 'supp', $p['produit']->getId()); ?>" data-home="<?= addLink('home', 'index'); ?>">Supprimer</button>
             </div>
@@ -18,6 +18,8 @@
         <div>
             <h3>Total des articles</h3>
             <p id="total_price"><?= htmlspecialchars($total); ?><span> €</span></p>
+            <button class="btn-valider"><a href="<?= addLink('commande', 'index'); ?>">Valider le panier</a></button>
+
         </div>
 
     <?php } else { ?>
@@ -25,4 +27,4 @@
         <a href="<?= addLink('home', 'index'); ?>">retour à l'accueil</a>
     <?php } ?>
     <link rel="stylesheet" href="<?= ROOT ?>public/assets/css/style-panier.css">
-</div> 
+</div>

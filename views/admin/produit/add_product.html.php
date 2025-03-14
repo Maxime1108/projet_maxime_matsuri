@@ -18,7 +18,7 @@
     </div>
     <div>
         <label for="image">Image</label>
-        <input type="file" name="image">
+        <input type="file" name="image">  
     </div>
     <div>
         <label for="categorie">Categorie</label>

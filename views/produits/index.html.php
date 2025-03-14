@@ -24,9 +24,18 @@
                 <button class="view-article">
                     <a href="<?= addlink('produits', 'details', $produit->getId()); ?>">Voir l'Article</a>
                 </button>
+                
             </div>
         </div>
+        
     <?php endforeach; ?>
+</div>
+
+<div class="pagination">
+    <a href="http://localhost/projet_maxime/produits/index?categorie=Jeux%20Videos" class="page-circle">1</a>
+    <a href="http://localhost/projet_maxime/produits/index?categorie=Mangas"class="page-circle">2</a>
+    <a href="http://localhost/projet_maxime/produits/index?categorie=Accessoires" class="page-circle">3</a>
+    <a href="http://localhost/projet_maxime/produits/index?categorie=V%C3%AAtements%20Traditionnels" class="page-circle">4</a>
 </div>
 
 <script>
@@ -44,5 +53,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".add-to-cart");
 
+    buttons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            
+           
+            const card = this.closest(".manga-card");
 
+           
+            const existingMessage = card.querySelector(".cart-message");
+            if (existingMessage) {
+                existingMessage.remove();
+            }
+
+            
+            const message = document.createElement("p");
+            message.textContent = "✅ Ajouté au panier !";
+            message.classList.add("cart-message");
+
+           
+            card.appendChild(message);
+
+            
+            setTimeout(() => {
+                message.remove();
+            }, 2000);
+        });
+    });
+});
+</script>

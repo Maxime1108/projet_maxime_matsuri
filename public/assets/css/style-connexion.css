@@ -80,7 +80,7 @@ main {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 2px;
   color: #555;
   text-align: center;

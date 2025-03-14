@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Serif+JP:wght@500&display=swap");
+
+.payment-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+}
+
+.payment-success h1 {
+  font-size: 2.5rem;
+  color: #b23b3b;
+  font-weight: 500;
+  font-family: "Kaushan Script", cursive;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border-bottom: 3px solid #b23b3b;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.payment-success a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  background: #b23b3b;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  border: 2px solid #8a2c2c;
+  font-family: "Noto Serif JP", serif;
+  box-shadow: 4px 4px 0px #8a2c2c;
+}
+
+.payment-success a:hover {
+  background: #8a2c2c;
+  border-color: #5a1a1a;
+  box-shadow: 4px 4px 0px #5a1a1a;
+  transform: translateY(-2px);
+}

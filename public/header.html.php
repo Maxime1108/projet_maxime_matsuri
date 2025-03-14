@@ -43,7 +43,7 @@
         </nav>
 
     </header>
-    <!-- On affiche ici les erreurs si elles existent (ça nous évitera de les passer à chaque vue dans chaque controleur) -->
+    <!-- On affiche ici les erreurs si elles existent (ça évitera de les passer à chaque vue dans chaque controleur) -->
     <?php if (!empty($_ENV['ERROR_MESSAGE'])): ?>
         <div class="error-message">
             <span class="alert-error"><?= htmlspecialchars($_ENV['ERROR_MESSAGE']) ?></span>

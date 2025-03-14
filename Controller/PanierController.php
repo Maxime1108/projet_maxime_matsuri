@@ -20,7 +20,6 @@ class PanierController extends BaseController
     {
         $panier = $_SESSION['cart'] ?? $_SESSION['cart'] = [];
         $json = file_get_contents('php://input');
-
         $data = json_decode($json, true);
         $id = $data['id'];
 
@@ -44,7 +43,7 @@ class PanierController extends BaseController
         ];
 
         $_SESSION['cart'] = $panier;
-
+        d_die($panier);
         $nb = count($panier);
 
         $_SESSION['nb'] = $nb;
@@ -55,16 +54,13 @@ class PanierController extends BaseController
 
     public function index()
     {
-
         $panier = $_SESSION['cart'] ?? [];
         $panier = Protect::protectHtmlSpecialChars($panier);
-
         $total = 0;
-
         foreach ($panier as $p) {
             $total += $p['produit']->getPrix() * $p['quantite'];
         }
-
+        $_SESSION['total'] = $total;
         $this->render('cart/index.html.php', ['panier' => $panier, 'total' => $total]);
     }
 

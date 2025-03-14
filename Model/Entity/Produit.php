@@ -5,7 +5,7 @@ namespace Model\Entity;
 class Produit extends BaseEntity
 {
     private string $title;
-    private string $description; // Et j'ajoute le getter et le setter pour pouvoir dire : Cette propriété je veux lui donner telle valeur ou récupérer sa valeur de la base de données
+    private string $description; 
     private float $prix;
     private string $image;
     private string $category;

@@ -127,3 +127,28 @@ body::after {
   left: 20px;
   opacity: 0.1;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ff9eb6;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.page-circle:hover {
+  background-color: #ff6584;
+}

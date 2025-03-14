@@ -8,7 +8,7 @@ class HomeController extends BaseController
 {
     public function index()
     {
-        // Ici on crée le tableau qui affichera les différentes catégories (ça libère la place dans la vue)
+        // Tableau qui affiche les différentes catégories 
         $categories = [
             ["title" => "Jeux Videos", "image" => "public/assets/img/animalcrossing.avif", "link" => "views/jeux_videos/jeux_video_page.html.php"],
             ["title" => "Mangas", "image" => "public/assets/img/tenki no ko.jpg", "link" => "views/mangas/manga_page.html.php"],
